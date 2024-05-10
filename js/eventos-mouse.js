@@ -6,7 +6,17 @@ minhaDiv.addEventListener('click', clicar)
 minhaDiv.addEventListener('contextmenu', clickDireito)
 minhaDiv.addEventListener('dblclick', clickDuplo)
 minhaDiv.addEventListener('mousemove', mover)
+minhaDiv.addEventListener('mousedown', apertar)
+minhaDiv.addEventListener('mouseup', soltar)
 
+function soltar(){
+    minhaDiv.innerHTML = 'Você Soltou'
+    minhaDiv.style.backgroundColor = 'lime'
+}
+function apertar(){
+    minhaDiv.innerHTML = 'Você Apertou'
+    minhaDiv.style.backgroundColor = 'aqua'
+}
 function mover(e){
     let x = e.clientX
     let y = e.clientY
